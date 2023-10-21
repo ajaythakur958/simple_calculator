@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&family=Nunito:ital,wght@1,300&family=Open+Sans:ital@1&display=swap');
+
+body {
+    font-size: 1.4rem;
+    margin: 6% auto;
+    font-family: 'Libre Franklin', sans-serif;
+    letter-spacing: 5px;
+    width: 500px;
+}
+
+.calculator {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 2%;
+    box-shadow: 0px 0px 20px 10px #ddd;
+}
+
+.input {
+    border: 1px solid #ddd;
+    width: 430px;
+    font-size: 0.5rem;
+    border-radius: 10px;
+    height: 60px;
+    text-align: right;
+    padding-top: 8px;
+    padding-left: 10px;
+    font-size: 2.6rem;
+    box-shadow: 0px 0px 40px 4px #ddd;
+}
+
+.input:focus {
+    outline: none;
+}
+
+#switch {
+    background-color: rgb(67, 189, 67);
+    color: white;
+    transition: 0.4s ease-out;
+}
+
+.operator button {
+    display: inline-block;
+    width: 100px;
+    padding: 8px;
+    font-size: 1.5rem;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    background-color: #ddd;
+    margin: 20px 4px 10px 0;
+    transition: 0.4s ease;
+    border-radius: 6%;
+}
+
+.operator button:hover {
+    background-color: rgb(202, 199, 199);
+}
+
+.numbers button {
+    display: inline-block;
+    width: 100px;
+    padding: 8px;
+    font-size: 1.5rem;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    background-color: white;
+    margin: 20px 4px 10px 0;
+    transition: 0.4s ease;
+    border-radius: 6%;
+}
+
+.numbers button:hover {
+    background-color: #ddd;
+}
+
+.left-panel {
+    display: inline-block;
+}
+
+.equal {
+    display: inline-block;
+    width: 100px;
+    border: 1px solid #bbb;
+    padding: 119px 10px;
+    font-size: 1.5rem;
+    margin: 20px 4px 10px 0;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    background-color: #4e92ff;
+    vertical-align: top;
+    transition: 0.4s ease;
+    border-radius: 3%;
+    font-weight: bold;
+}
+
+.equal:hover {
+    background-color: #3d82f0;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculatrr.css">
+    <link />
+
+</head>
+
+<body>
+    <script src="calculatr.js"></script>
+    <div class="calculator">
+        <input class="input" type="text" name="scren" id="screen" value="" readonly></input>
+        <div class="buttons">
+            <div class="operator">
+                <button class="button" id="switch">ON</button>
+                <button class="button" id="clearall">AC</button>
+                <button class="button">%</button>
+                <button class="button">&#8730</button>
+            </div>
+            <div class="operator">
+
+                <button class="button">+</button>
+                <button class="button">-</button>
+                <button class="button">&times</button>
+                <button class="button">&divide</button>
+            </div>
+            <div class="left-panel">
+                <div class="numbers">
+                    <button class="button">7</button>
+                    <button class="button">8</button>
+                    <button class="button">9</button>
+                </div>
+                <div class="numbers">
+                    <button class="button">4</button>
+                    <button class="button">5</button>
+                    <button class="button">6</button>
+                </div>
+                <div class="numbers">
+                    <button class="button">1</button>
+                    <button class="button">2</button>
+                    <button class="button">3</button>
+                </div>
+                <div class="numbers">
+                    <button class="button">0</button>
+                    <button class="button">.</button>
+                    <button class="button" id="clear">C</button>
+                </div>
+            </div>
+            <button class="equal button" id="result">=</button>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var screen = document.getElementById('screen');
+    var buttons = document.querySelectorAll('.button');
+    let calswitch = document.getElementById('switch');
+    let toggle = true;
+    var string = " ";
+
+    buttons.forEach((button) => {
+        button.addEventListener('click', (item) => {
+            btnvalue = item.target.innerText;
+            if (btnvalue == '=' && toggle == true) {
+                screen.value = eval(string);
+                string = eval(string);
+            } else if (btnvalue == 'AC' && toggle == true) {
+                screen.value = "";
+                string = "";
+            } else if (btnvalue == '÷' && toggle == true) {
+                string += "/";
+                screen.value = string;
+            } else if (btnvalue == '×' && toggle == true) {
+                string += "*";
+                screen.value = string;
+            } else if (btnvalue == 'C' && toggle == true) {
+                screen.value = "";
+                string = "";
+            } else if (btnvalue == '√' && toggle == true) {
+                screen.value = Math.sqrt(string);
+                string = Math.sqrt(string);
+            } else if (btnvalue == 'ON' || btnvalue == 'OFF') {
+                if (toggle == true) {
+                    toggle = false;
+                    calswitch.innerHTML = "OFF";
+                    calswitch.style.background = "rgb(243, 40, 40)";
+
+                } else {
+                    toggle = true;
+                    calswitch.innerHTML = "ON";
+                    calswitch.style.background = "rgb(67, 189, 67)";
+                }
+            }
+
+            else if (toggle == true) {
+                string += btnvalue;
+                screen.value = string;
+            }
+        })
+
+    })
+
+
+</script>
